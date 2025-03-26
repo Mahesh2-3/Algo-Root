@@ -8,7 +8,7 @@ import { useState, useEffect } from 'react';
 import { useMenu } from '../context/MenuContext';
 import "./details.css"
 
-const page = () => {
+const Page = () => {
   const [mockdata, setmockdata] = useState([])
   const [Empty, setEmpty] = useState(false)
   const { isVisible, toggleVisibility } = useMenu();
@@ -130,4 +130,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
