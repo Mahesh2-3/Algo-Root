@@ -6,7 +6,7 @@ import mockData from './mockData.json'
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { useMenu } from '../context/MenuContext';
-import "./Details.css"
+import "./details.css"
 
 const page = () => {
   const [mockdata, setmockdata] = useState([])
