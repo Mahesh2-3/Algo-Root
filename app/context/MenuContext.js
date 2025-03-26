@@ -8,10 +8,10 @@ export const MenuProvider = ({ children }) => {
     const [isVisible, setIsVisible] = useState(false);
 
     const toggleVisibility = (message) => {
+        
         if (message === "") {
             setIsVisible(prev => !prev);
-
-        } else {
+        } else if (typeof(message) === "boolean") {
             setIsVisible(message)
         }
     }
