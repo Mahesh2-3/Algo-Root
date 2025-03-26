@@ -55,7 +55,7 @@ const Login = () => {
                         <input className='bg-transparent w-full px-4 py-2 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500' placeholder="Email" {...register("email", { required: "This field is quired", pattern: { value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/, message: "Invalid email address", }, })} />
                         {errors.email && <span className='text-red-600'>{errors.email.message}</span>}
 
-                        <input className='bg-transparent w-full px-4 py-2 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500' placeholder="Password" {...register("password", { required: true, pattern: { value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$/, message: "Password include uppercase, lowercase, number.", }, minLength: { value: 8, message: "Password must be at least 8 characters long." } })} />
+                        <input className='bg-transparent w-full px-4 py-2 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500' placeholder="Password" {...register("password", { required: true, pattern: { value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/, message: "Password include uppercase, lowercase, number.", }, minLength: { value: 8, message: "Password must be at least 8 characters long." } })} />
                         {errors.password && <span className='text-red-600'>{errors.password.message}</span>}
 
                         <input className=' cursor-pointer w-full px-4 py-2 text-xl rounded-md focus:outline-none bg-blue-500' type="submit" />
