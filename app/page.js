@@ -52,7 +52,7 @@ const Login = () => {
                 <div className='w-[550px]  flex flex-col justify-center gap-3 items-center  p-6 rounded-lg shadow-lg'>
                     <h1 className='text-3xl w-fit px-8 py-2 border-b-2 font-semibold text-center mb-4'>SignUp</h1>
                     <form className='flex flex-col w-[100%] gap-4' onSubmit={handleSubmit(onSubmit)}>
-                        <input className='bg-transparent w-full px-4 py-2 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500' placeholder="Email" {...register("email", { required: "This field is quired", pattern: { value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/, message: "Invalid email address", }, })} />
+                        <input className='bg-transparent w-full px-4 py-2 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500' placeholder="Email" {...register("email", { required: "This field is required", pattern: { value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/, message: "Invalid email address", }, })} />
                         {errors.email && <span className='text-red-600'>{errors.email.message}</span>}
 
                         <input className='bg-transparent w-full px-4 py-2 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500' placeholder="Password" {...register("password", { required: true, pattern: { value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/, message: "Password include uppercase, lowercase, number.", }, minLength: { value: 8, message: "Password must be at least 8 characters long." } })} />
